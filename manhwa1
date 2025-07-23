@@ -1,0 +1,21 @@
+manhwa-wave/
+│
+├── manhwa1/
+│    ├── ch1/
+│    │    ├── page1.jpg
+│    │    ├── page2.jpg
+│    │    └── ...
+│    ├── ch2/
+│    │    ├── page1.jpg
+│    │    ├── page2.jpg
+│    │    └── ...
+│    └── ch3/
+│         ├── page1.jpg
+│         ├── page2.jpg
+│         └── ...
+├── index.html
+├── manhwa1.html
+├── output/   ← هنا السكريبت يولد صفحات الفصول
+└── assets/
+     └── images/
+          └── (صور الغلاف وأشياء ثانية)
