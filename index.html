@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>مانهوا ~-~</title>
   <style>
     body {
@@ -11,62 +11,136 @@
       color: #424242;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
     header {
       background-color: #ffffff;
-      border-bottom: 2px solid #D32F2F;
-      padding: 10px 20px;
+      border-bottom: 3px solid #D32F2F;
+      padding: 15px 25px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
     header h1 {
       color: #000000;
       margin: 0;
-      font-size: 24px;
-    }
-    nav a {
-      margin: 0 10px;
-      color: #D32F2F;
-      text-decoration: none;
+      font-size: 28px;
       font-weight: bold;
+      user-select: none;
     }
     .search-box {
-      border: 1px solid #D32F2F;
-      padding: 5px;
-      border-radius: 5px;
+      border: 2px solid #D32F2F;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 200px;
+      transition: border-color 0.3s ease;
+    }
+    .search-box:focus {
+      outline: none;
+      border-color: #a52727;
+      box-shadow: 0 0 8px #D32F2Faa;
+    }
+    nav {
+      text-align: center;
+      background-color: #fff;
+      padding: 15px 0;
+      box-shadow: inset 0 -1px 0 #D32F2F;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #D32F2F;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #a52727;
+      text-decoration: underline;
     }
     .content {
-      padding: 20px;
+      padding: 25px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .content h2 {
+      color: #D32F2F;
+      margin-bottom: 20px;
+      font-size: 24px;
+      border-bottom: 2px solid #D32F2F;
+      padding-bottom: 5px;
+      user-select: none;
     }
     .manga-card {
-      border: 1px solid #D32F2F;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 10px;
+      border: 1.5px solid #D32F2F;
+      border-radius: 10px;
+      padding: 15px 15px 15px 130px;
+      margin-bottom: 20px;
+      position: relative;
+      background-color: #fff8f8;
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .manga-card:hover {
+      box-shadow: 0 0 12px #D32F2F66;
     }
     .manga-card img {
-      width: 100px;
+      width: 110px;
       height: auto;
-      float: right;
-      margin-left: 10px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+    .manga-card strong {
+      font-size: 20px;
+      color: #000;
+      user-select: none;
     }
     footer {
       text-align: center;
-      padding: 10px;
-      background-color: #f0f0f0;
+      padding: 15px 10px;
+      background-color: #f8f8f8;
       color: #424242;
       border-top: 1px solid #ccc;
+      font-size: 14px;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+      .search-box {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 10px;
+      }
+      .manga-card {
+        padding-left: 20px;
+        padding-top: 110px;
+      }
+      .manga-card img {
+        position: relative;
+        top: auto;
+        right: auto;
+        display: block;
+        margin: 0 auto 15px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>مانهوا ~-~</h1>
-    <input class="search-box" type="text" placeholder="🔍 ابحث عن مانهوات...">
+    <input class="search-box" type="text" placeholder="🔍 ابحث عن مانهوات..." />
   </header>
 
-  <nav style="text-align:center; padding: 10px;">
+  <nav>
     <a href="#">🏠 الرئيسية</a>
     <a href="#">📚 المانهوات</a>
     <a href="#">🎭 الأنواع</a>
@@ -74,21 +148,22 @@
 
   <div class="content">
     <h2>🔥 جديد اليوم</h2>
-    <div class="manga-card">
+    <div class="manga-card" tabindex="0">
       <img src="https://via.placeholder.com/100" alt="غلاف المانهو" />
-      <strong>عنوان المانهو 1</strong><br>
+      <strong>عنوان المانهو 1</strong><br />
       وصف قصير عن المانهو...
     </div>
-    <div class="manga-card">
+    <div class="manga-card" tabindex="0">
       <img src="https://via.placeholder.com/100" alt="غلاف المانهو" />
-      <strong>عنوان المانهو 2</strong><br>
+      <strong>عنوان المانهو 2</strong><br />
       وصف قصير عن المانهو...
     </div>
   </div>
 
   <footer>
-    📝 تسجيل الدخول | 🧾 قائمة القراءة<br>
+    📝 تسجيل الدخول | 🧾 قائمة القراءة<br />
     &copy; 2025 مانهوا ~-~
   </footer>
 </body>
 </html>
+
